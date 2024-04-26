@@ -10,19 +10,9 @@
 
 ## RESOURCES
 
-### Main Video
-
-🌟 [EASY Minting dApp | Whitelisting | Entire Process!! Create an Entire NFT Collection (10,000+)](https://youtu.be/cLB7u0KQFIs)
-
-### Update Video adding Ethereum support!
-
-🚀 [How To Deploy a Smart Contract to Ethereum!! (Updated Minting dApp)](https://youtu.be/-EB2TTQxSWc)
-
 Base art generator code is from [hashlips_art_engine](https://github.com/HashLips/hashlips_art_engine)
 
 Contract uses [NFTPort](https://nftport.xyz)
-
-Join the Discord server for more help from the community: [codeSTACKr Discord](https://discord.gg/A9CnsVzzkZ)
 
 ## INSTALLATION
 
@@ -30,79 +20,93 @@ Join the Discord server for more help from the community: [codeSTACKr Discord](h
 
 - Clone this repo or download the latest release zip file.
 - Unzip, if needed, and open the folder in VS Code.
-- From the terminal run: 
+- From the terminal run:
+
 ```
  cd backend
  npm install
 ```
+
 - Copy your image layers into the `/backend/layers` folder.
 - Use the `/backend/src/config.js` file to set up your layers and NFT information.
 
 ### Backend Commands
 
-Generate: 
+Generate:
+
 ```
 $ npm run generate
 ```
+
 - Generates unique images based on the layers in the `/backend/layers` folder.
 - WARNING: This command deletes the `/backend/build` folder if it exists!
 
-Rarity (Hashlips): 
+Rarity (Hashlips):
+
 ```
 $ npm run rarity
 ```
+
 - Calculates the rarity of NFT properties based on layer files.
 
-Rarity (codeSTACKr): 
+Rarity (codeSTACKr):
+
 ```
 $ npm run rarity_md
 ```
 
 - Calculates the rarity of NFT properties based on metadata.
 
-Rarity Rank (codeSTACKr): 
+Rarity Rank (codeSTACKr):
+
 ```
 $ npm run rarity_rank
 ```
 
 - Provides ranking details through a user interface after calculating using the codeSTACKr Rarity command.
 
-Update Info: 
+Update Info:
+
 ```
 $ npm run update_info
 ```
 
 - Allows you to update `namePrefix`, `description`, and/or `baseUri` for metadata after it was already generated.
 
-Create Generic Metadata: 
+Create Generic Metadata:
+
 ```
 $ npm run create_generic
 ```
 
 - Creates generic metadata using the settings from the `/backend/src/config.js` file.
 
-Upload Files/Images: 
+Upload Files/Images:
+
 ```
 $ npm run upload_files
 ```
 
 - Uploads all files in the `/backend/build/images` folder.
 
-Upload Metadata: 
+Upload Metadata:
+
 ```
 $ npm run upload_metadata
 ```
 
-- Uploads all `.json` files in both the `/backend/build/json` folder and, if it exists, the `/backend/build/genericJson` folder as well. 
+- Uploads all `.json` files in both the `/backend/build/json` folder and, if it exists, the `/backend/build/genericJson` folder as well.
 
-Deploy Contract: 
+Deploy Contract:
+
 ```
 $ npm run deploy_contract
 ```
 
 - Deploys a contract to the blockchain using the settings from the `/backend/src/config.js` file.
 
-Get Contract: 
+Get Contract:
+
 ```
 $ npm run get_contract
 ```
@@ -110,6 +114,7 @@ $ npm run get_contract
 - Gets the deployed contract details including the contracts ABI using the transactions hash from the Deploy Contract command.
 
 Update Contract:
+
 ```
 $ npm run update_public_mint_start_date
 $ npm run update_presale_mint_start_date
@@ -132,7 +137,8 @@ $ npm run update_prereveal_token_uri
   - `royalties_share` - Updates the royalty share
   - `royalties_address` - Updates the royalty wallet address
 
-Refresh OpenSea: 
+Refresh OpenSea:
+
 ```
 $ npm run refresh_os --start=1 --end=100
 ```
@@ -145,6 +151,3 @@ $ npm run refresh_os --start=1 --end=100
 - Update the `frontend/js/abi.js` file with the ABI from `backend/build/contract/_contract_abi.json`.
 - Update your information in the `frontend/js/constants.js` file.
 - Deploy your dApp to Netlify. (Reference the video for full instructions.)
-
-
-## Reference the [main video](https://youtu.be/cLB7u0KQFIs) and [update video](https://youtu.be/-EB2TTQxSWc) for more details.
